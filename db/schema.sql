@@ -1,11 +1,11 @@
-DROP DATABASE IF EXISTS pets_db;
-CREATE DATABASE pets_db;
+DROP DATABASE IF EXISTS burgers_db;
+CREATE DATABASE burgers_db;
 
-USE pets_db;
+USE burgers_db;
 
-CREATE TABLE cats (
+CREATE TABLE burgers (
   id INT(11) AUTO_INCREMENT NOT NULL,
   name VARCHAR(255) NOT NULL,
-  sleepy BOOLEAN DEFAULT false,
+  eaten BOOLEAN DEFAULT false,
   PRIMARY KEY (id)
 );
