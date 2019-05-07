@@ -6,7 +6,7 @@ module.exports = app => {
   // GET all burgers
   app.get("/api/burgers", function(req, res) {
     burgers.findAll()
-      .then(dbBurgersData => res.json(dbBurgersData))
+      .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
         res.json(err);
@@ -18,7 +18,7 @@ module.exports = app => {
     // pass req.body into create method 
     // req.body => {name: "catty cat"}
     burgers.create(req.body)
-      .then(dbBurgersData => res.json(dbBurgersData))
+      .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
         res.json(err);
@@ -29,7 +29,7 @@ module.exports = app => {
   // get a burger by its id
   app.get("/api/burgers/:id", function(req, res) {
     burgers.findById(req.params.id)
-      .then(dbBurgersData => res.json(dbBurgersData))
+      .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
         res.json(err);
@@ -40,7 +40,7 @@ module.exports = app => {
   app.put("/api/burgers/:id", function(req, res) {
     // req.body => {sleepy: true} || {sleepy : false}
     burgers.update(req.body.sleepy, req.params.id)
-      .then(dbBurgersData => res.json(dbBurgersData))
+      .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
         res.json(err);
@@ -50,7 +50,7 @@ module.exports = app => {
   // DELETE a burger by its id
   app.delete("/api/burgers/:id", function(req, res) {
     burgers.remove(req.params.id)
-      .then(dbBurgersData => res.json(dbBurgersData))
+      .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
         res.json(err);

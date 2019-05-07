@@ -10,8 +10,8 @@ module.exports = (app) => {
     burgers
       .findAll()
       // if we get to resolve()
-      .then(dbBurgersData => {
-        res.render("index", {catData: dbBurgersData})
+      .then(dbBurgerData => {
+        res.render("index", {catData: dbBurgerData})
       })
       // if we get to reject()
       .catch(err => {
