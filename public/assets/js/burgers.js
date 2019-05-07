@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     // package up form data for req.body purposes
     const burgerData = {
-      burger_name: $("#name-input").val().trim()
+      name: $("#name-input").val().trim()
     }
 
     $.ajax({

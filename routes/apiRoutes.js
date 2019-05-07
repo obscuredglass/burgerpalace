@@ -39,7 +39,7 @@ module.exports = app => {
   // PUT/update a burger's eaten to true/false by id
   app.put("/api/burgers/:id", function(req, res) {
     // req.body => {sleepy: true} || {sleepy : false}
-    burgers.update(req.body.sleepy, req.params.id)
+    burgers.update(req.body.eaten, req.params.id)
       .then(dbBurgerData => res.json(dbBurgerData))
       .catch(err => {
         console.log(err);
