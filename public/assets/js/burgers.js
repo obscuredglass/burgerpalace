@@ -23,9 +23,9 @@ $(document).ready(function() {
 
   });
 
-  // update cat
+  // update burger
   $(".update-burger").on("click", function() {
-    // read back cat's id and sleepy status
+    // read back burger's id and sleepy status
     const burgerId = $(this).attr("data-id");
     const eaten = $(this).attr("data-eaten")
 
@@ -41,7 +41,7 @@ $(document).ready(function() {
   });
 
   $(".delete-burger").on("click", function() {
-    // get cat's id
+    // get burger's id
     const burgerId = $(this).attr("data-id");
 
     $.ajax({

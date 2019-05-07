@@ -6,12 +6,12 @@ module.exports = (app) => {
 
   app.get("/", function(req, res) {
 
-    // use cat.findAll
+    // use burger.findAll
     burgers
       .findAll()
       // if we get to resolve()
       .then(dbBurgerData => {
-        res.render("index", {catData: dbBurgerData})
+        res.render("index", {burgerData: dbBurgerData})
       })
       // if we get to reject()
       .catch(err => {
