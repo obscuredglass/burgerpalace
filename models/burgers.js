@@ -41,7 +41,7 @@ const update = (eatenValue, burgerId) => {
         if (err){
           return reject(err);
         } else if (dbBurgerData.changedRows === 0){
-          return reject({message: "This is not the burger you're looking for"})
+          return reject({message: "This ain't it chief"})
         } else {
           return resolve(dbBurgerData)
         }
